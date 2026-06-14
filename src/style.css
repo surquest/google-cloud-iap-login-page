@@ -1,0 +1,111 @@
+body { 
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+    background-color: #f0f4f8; /* Softer, modern surface container color */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    color: #1f1f1f;
+}
+
+/* Material 3 Card Styling */
+.login-card { 
+    background: #ffffff; 
+    padding: 40px 32px; 
+    border-radius: 28px; /* M3 extra-large shape */
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04); 
+    width: 100%; 
+    max-width: 380px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative; /* Anchor for absolute overlay */
+    overflow: hidden; /* Ensure overlay respects border radius */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.header md-icon {
+    font-size: 48px;
+    color: #0052cc;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+.header h2 { 
+    margin: 0; 
+    font-size: 24px; 
+    font-weight: 400; 
+}
+
+.form-section { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px; 
+}
+
+/* Modern horizontal divider with text */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #757575;
+    font-size: 14px;
+    margin: 8px 0;
+}
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+.divider:not(:empty)::before { margin-right: 16px; }
+.divider:not(:empty)::after { margin-left: 16px; }
+
+.message { 
+    color: #b3261e; /* M3 Error color */
+    font-size: 16px; 
+    text-align: center; 
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    
+    /* Overlay styles */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.show-message {
+    animation: fadeInOverlay 0.3s ease-out forwards;
+    pointer-events: auto; /* Enable clicks when visible */
+    cursor: pointer;
+}
+
+@keyframes fadeInOverlay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Component overrides */
+md-outlined-text-field, md-filled-button, md-outlined-button { 
+    width: 100%; 
+}
+
+#btnLogin { --md-sys-color-primary: #0052cc; }
+#btnAuth0 { --md-sys-color-primary: #eb5424; }

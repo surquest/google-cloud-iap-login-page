@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal</title>
+    
+    <!-- Google Fonts & Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "firebase/app": "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js",
+        "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js",
+        "gcip-iap": "https://esm.sh/gcip-iap@2.0.1?external=firebase/app,firebase/auth",
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <div class="login-card" id="ui-container" style="display: none;">
+        
+        <div class="header">
+            <md-icon>lock_person</md-icon>
+            <h2>Sign In</h2>
+        </div>
+
+        <div id="emailSection" class="form-section">
+            <md-outlined-text-field label="Email" type="email" id="email" placeholder="customer@example.com"></md-outlined-text-field>
+            <md-outlined-text-field label="Password" type="password" id="password" placeholder="••••••••"></md-outlined-text-field>
+            <md-filled-button id="btnLogin">
+                <md-icon slot="icon">login</md-icon>
+                Sign in with Email
+            </md-filled-button>
+        </div>
+
+        <div id="orDivider" class="divider">OR</div>
+
+        <!-- External Providers -->
+        <md-filled-button id="btnAuth0">
+            <md-icon slot="icon">vpn_key</md-icon>
+            Sign in with Auth0
+        </md-filled-button>
+        
+        <!-- Outlined button works better for Google so it doesn't clash visually -->
+        <md-outlined-button id="btnGoogle">
+            <md-icon slot="icon">account_circle</md-icon>
+            Sign in with Google
+        </md-outlined-button>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

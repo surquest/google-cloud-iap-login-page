@@ -1,0 +1,14 @@
+{
+    "loginOptions": {
+        "enableEmail": true,
+        "enableAuth0": true,
+        "enableGoogle": true
+    },
+    "firebase": {
+        "apiKey": "AIzaSyAGzLWWYNZLSyA2OyoPrZ3KaR2Ehqq1xpg",
+        "authDomain": "analytics-data-mart-dev.firebaseapp.com"
+    },
+    "providers": {
+        "auth0": "oidc.auth0--auth-me"
+    }
+}
