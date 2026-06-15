@@ -5,8 +5,8 @@
         "enableGoogle": true
     },
     "firebase": {
-        "apiKey": "AIzaSyAGzLWWYNZLSyA2OyoPrZ3KaR2Ehqq1xpg",
-        "authDomain": "analytics-data-mart-dev.firebaseapp.com"
+        "apiKey": "AIzaSyCNyn2BEShVxg7iWYHA2bd2MJDvflU3SYI",
+        "authDomain": "dh-data-cln-room-91442.firebaseapp.com"
     },
     "providers": {
         "auth0": "oidc.auth0--auth-me"
